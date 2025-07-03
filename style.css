@@ -102,7 +102,7 @@ body {
     text-align: center;
     font-size: 2.2em;
     color: #d8e5fa;
-    margin-bottom: 36px;
+    margin-bottom: 99px;
     font-weight: 700;
     letter-spacing: 0.5px;
     line-height: 1.2;
@@ -329,3 +329,57 @@ footer {
     background: #f1f5f9;
     margin-top: 40px;
 }
+
+/* Oddzielanie sekcji */
+section,
+.founders-section,
+.steps-section,
+.app-features-section {
+    margin-top: 32px;
+    margin-bottom: 32px;
+    position: relative;
+}
+
+@media (max-width: 600px) {
+    section,
+    .founders-section,
+    .steps-section,
+    .app-features-section {
+        margin-top: 18px;
+        margin-bottom: 18px;
+    }
+}
+
+/* Uniwersalny separator sekcji */
+.section-divider {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    border: none;
+    border-top: 1.5px solid #e0e7ef;
+    opacity: 0.7;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+@media (max-width: 600px) {
+    section,
+    .founders-section,
+    .steps-section,
+    .app-features-section {
+        margin-top: 36px;
+        margin-bottom: 36px;
+    }
+}
+
+/* Uniwersalny separator sekcji */
+.section-divider {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto 0 auto;
+    border: none;
+    border-top: 1.5px solid #e0e7ef;
+    opacity: 0.7;
+    margin-bottom: 0;
+}
+
