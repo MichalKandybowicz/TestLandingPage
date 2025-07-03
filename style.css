@@ -5,6 +5,54 @@ body {
     background: linear-gradient(90deg, #3081ED 0%, #2d3748 100%);
     color: #222;
 }
+
+/* Language Toggle */
+.language-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 10;
+    display: flex;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 4px;
+    backdrop-filter: blur(10px);
+}
+
+.lang-btn {
+    background: transparent;
+    border: none;
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 16px;
+    cursor: pointer;
+    font-size: 0.9em;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    min-width: 40px;
+}
+
+.lang-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.lang-btn.active {
+    background: #fbbf24;
+    color: #222;
+}
+
+@media (max-width: 600px) {
+    .language-toggle {
+        top: 15px;
+        right: 15px;
+    }
+    
+    .lang-btn {
+        padding: 6px 12px;
+        font-size: 0.8em;
+        min-width: 35px;
+    }
+}
 .hero-logo {
     width: 300px;
     margin-bottom: 24px;
