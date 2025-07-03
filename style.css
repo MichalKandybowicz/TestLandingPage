@@ -5,14 +5,16 @@ body {
     background: linear-gradient(90deg, #3081ED 0%, #2d3748 100%);
     color: #222;
 }
+
 .hero-logo {
     width: 300px;
     margin-bottom: 24px;
     display: block;
     margin-left: auto;
     margin-right: auto;
-    animation: img-pop 1.2s cubic-bezier(.5,1.8,.5,1) 0.1s both;
+    animation: img-pop 1.2s cubic-bezier(.5, 1.8, .5, 1) 0.1s both;
 }
+
 .hero {
     color: #fff;
     text-align: center;
@@ -21,35 +23,54 @@ body {
     overflow: hidden;
     animation: hero-fadein 1s;
 }
+
 @keyframes hero-fadein {
-    from { opacity: 0; transform: translateY(-30px);}
-    to { opacity: 1; transform: translateY(0);}
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
+
 .hero-content {
     position: relative;
     z-index: 2;
 }
+
 .hero-img {
     width: 240px;
     margin-bottom: 28px;
     border-radius: 18px;
     box-shadow: 0 6px 32px #0003;
-    animation: img-pop 1.2s cubic-bezier(.5,1.8,.5,1) 0.2s both;
+    animation: img-pop 1.2s cubic-bezier(.5, 1.8, .5, 1) 0.2s both;
 }
+
 @keyframes img-pop {
-    0% { transform: scale(0.8); opacity: 0;}
-    100% { transform: scale(1); opacity: 1;}
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
 }
+
 .hero-title {
     font-size: 3.2em;
     margin: 0 0 20px 0;
     letter-spacing: 1px;
 }
+
 .hero-desc {
     font-size: 1.35em;
     margin-bottom: 36px;
     color: #e0e7ef;
 }
+
 .cta-btn {
     background: #fbbf24;
     color: #222;
@@ -65,36 +86,67 @@ body {
     display: inline-block;
     animation: btn-fadein 1.2s 0.5s both;
 }
+
 .cta-btn:hover {
     background: #ffd166;
     transform: translateY(-2px) scale(1.04);
 }
+
 @keyframes btn-fadein {
-    0% { opacity: 0; transform: translateY(20px);}
-    100% { opacity: 1; transform: translateY(0);}
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
+
 .hero-wave {
     position: absolute;
-    left: 0; right: 0; bottom: -1px;
+    left: 0;
+    right: 0;
+    bottom: -1px;
     width: 100%;
     height: 80px;
     z-index: 1;
     pointer-events: none;
 }
+
 @media (max-width: 600px) {
-    .hero-title { font-size: 2em; }
-    .hero-img { width: 90px; }
-    .hero-desc { font-size: 1em; }
-    .cta-btn { padding: 14px 24px; font-size: 1em;}
+    .hero-title {
+        font-size: 2em;
+    }
+
+    .hero-img {
+        width: 90px;
+    }
+
+    .hero-desc {
+        font-size: 1em;
+    }
+
+    .cta-btn {
+        padding: 14px 24px;
+        font-size: 1em;
+    }
 }
 
 /* Animacja fade-in dla sekcji */
 .app-features-section, .steps-section {
     animation: section-fadein 1.1s;
 }
+
 @keyframes section-fadein {
-    from { opacity: 0; transform: translateY(40px);}
-    to { opacity: 1; transform: translateY(0);}
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Uniwersalny styl tytułów sekcji */
@@ -102,144 +154,379 @@ body {
     text-align: center;
     font-size: 2.2em;
     color: #d8e5fa;
-    margin-bottom: 99px;
+    margin-bottom: 60px;
     font-weight: 700;
     letter-spacing: 0.5px;
     line-height: 1.2;
 }
+
 @media (max-width: 600px) {
     .section-title {
         font-size: 1.4em;
-        margin-bottom: 24px;
+        margin-bottom: 40px;
     }
 }
 
-/* Sekcja z 4 kafelkami */
-/*.app-features-section {*/
-/*    padding: 56px 0 32px 0;*/
-/*    background: #fff;*/
-/*}*/
-.features-title {
-    text-align: center;
-    font-size: 2em;
-    color: #ffffff;
-    margin-bottom: 36px;
+/* Sekcja z 5 flip-kafelkami (features) - PYRAMID LAYOUT */
+.app-features-section {
+    padding: 80px 20px 120px 20px; /* Increased padding to accommodate cards */
+    position: relative;
+    overflow: visible; /* Allow cards to be visible */
 }
+
 .features {
     display: flex;
-    flex-wrap: wrap;
-    gap: 32px;
-    justify-content: center;
-    margin: 60px auto 40px auto;
-    max-width: 1100px;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px; /* Same as horizontal gap between cards */
+    margin: 0 auto;
+    max-width: 1200px;
+    position: relative;
 }
+
+.features-row {
+    display: flex;
+    justify-content: center;
+    gap: 32px; /* Horizontal gap between cards */
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 1;
+}
+
+.features-row.top-row {
+    /* 3 cards on top */
+}
+
+.features-row.bottom-row {
+    /* 2 cards on bottom, centered */
+}
+
 .feature {
-    background: #fff;
-    border-radius: 16px;
-    box-shadow: 0 2px 12px #0001;
-    flex: 1 1 220px;
+    /* Will be our flip-card container */
+    perspective: 800px;
     min-width: 220px;
     max-width: 260px;
+    width: 100%;
+    height: 340px;
+    display: flex;
+    align-items: stretch;
+    justify-content: stretch;
+    background: none;
+    box-shadow: none;
+    border: none;
+    padding: 0;
+    border-radius: 16px;
+    position: relative;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.flip-card-inner {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s cubic-bezier(.5, 1.8, .5, 1);
+    transform-style: preserve-3d;
+    will-change: transform;
+    position: relative;
+    display: flex;
+}
+
+.feature:hover .flip-card-inner,
+.feature:focus-within .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.feature-front, .feature-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    min-width: 220px;
+    max-width: 260px;
+    min-height: 340px;
+    max-height: 340px;
+    backface-visibility: hidden;
+    border-radius: 16px;
+    box-shadow: 0 2px 12px #0001;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     text-align: center;
     padding: 32px 18px 28px 18px;
+    font-size: 1em;
+    box-sizing: border-box;
     border-top: 5px solid #3081ED;
-    transition: transform 0.22s cubic-bezier(.5,1.8,.5,1), box-shadow 0.22s;
-    will-change: transform;
+    background: #fff;
+    color: #222;
 }
-.feature:hover {
-    transform: translateY(-8px) scale(1.04);
-    box-shadow: 0 8px 32px #3081ED22;
-}
-.feature img {
+
+.feature-front img {
     width: 56px;
     margin-bottom: 18px;
 }
-.feature h3 {
+
+.feature-front h3 {
     color: #3081ED;
     margin-bottom: 10px;
 }
 
+.feature-front p {
+    color: #222;
+}
+
+.feature-back {
+    background: #fffbe7;
+    border-top: 5px solid #fbbf24;
+    color: #222;
+    box-shadow: 0 8px 32px #ffc10733;
+    transform: rotateY(180deg);
+    font-size: 1em;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 32px 18px 28px 18px;
+}
+
+.feature-back p {
+    margin: 0;
+    color: #222;
+    font-size: 1em;
+    line-height: 1.45;
+}
+
+.feature:hover, .feature:focus-within {
+    transform: translateY(-8px) scale(1.04);
+    box-shadow: 0 8px 32px #3081ED22;
+}
+
+/* Responsive features */
+@media (max-width: 900px) {
+    .app-features-section {
+        padding: 60px 20px 80px 20px; /* Adjusted padding for mobile */
+    }
+
+    .features {
+        flex-direction: column;
+        align-items: center;
+        gap: 32px; /* Same gap on mobile */
+    }
+
+    .features-row {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        gap: 32px; /* Same gap between mobile cards */
+    }
+
+    .feature {
+        max-width: 90vw;
+        width: 100%;
+        height: auto;
+        min-height: 220px;
+    }
+
+    .feature-front, .feature-back {
+        min-width: 0;
+        max-width: 100vw;
+        min-height: 220px;
+        max-height: none;
+        height: 100%;
+    }
+}
+
 /* Sekcja kroków (Jak to działa?) */
 .steps-section {
-    padding: 48px 0;
+    padding: 48px 20px;
 }
+
 .steps-flow {
     display: flex;
-    align-items: center;
+    align-items: stretch;
     justify-content: center;
-    gap: 0;
+    gap: 36px; /* odstęp między kartami */
     flex-wrap: wrap;
     margin-bottom: 24px;
+    position: relative;
 }
+
 .steps-flow .step {
-    background: #fff;
-    border-radius: 12px;
-    box-shadow: 0 2px 8px #0001;
-    padding: 24px 18px;
+    position: relative;
+    overflow: visible;
+    perspective: 800px;
+    background: none;
+    box-shadow: none;
+    border: none;
+    padding: 0;
     min-width: 180px;
     max-width: 180px;
     height: 220px;
-    text-align: center;
-    border-bottom: 4px solid #fbbf24;
     margin: 0 0;
-    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    transition: transform 0.22s cubic-bezier(.5,1.8,.5,1), box-shadow 0.22s;
+    flex-shrink: 0;
+}
+
+.flip-card {
+    perspective: 800px;
+    width: 180px;
+    height: 220px;
+    margin: 0 0;
+    background: none;
+    box-shadow: none;
+    border: none;
+    padding: 0;
+    flex-shrink: 0;
+    position: relative;
+    display: flex;
+    align-items: stretch;
+    justify-content: stretch;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s cubic-bezier(.5, 1.8, .5, 1);
+    transform-style: preserve-3d;
     will-change: transform;
+    display: flex;
 }
-.steps-flow .step:hover {
-    transform: translateY(-8px) scale(1.04);
-    box-shadow: 0 8px 32px #fbbf2422;
+
+.flip-card:hover .flip-card-inner,
+.flip-card:focus-within .flip-card-inner {
+    transform: rotateY(180deg);
 }
+
+.step-front, .step-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    min-width: 180px;
+    max-width: 180px;
+    min-height: 220px;
+    max-height: 220px;
+    backface-visibility: hidden;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px #0001;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* vertical centering! */
+    text-align: center;
+    padding: 24px 18px;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+
+.step-front {
+    background: #fff;
+    z-index: 2;
+    border-bottom: 4px solid #fbbf24;
+}
+
+.step-back {
+    background: #fffbe7;
+    border-bottom: 4px solid #ffc107;
+    color: #222;
+    font-size: 0.98em;
+    box-shadow: 0 8px 32px #ffc10733;
+    transform: rotateY(180deg);
+    z-index: 1;
+}
+
 .steps-flow .step img {
     width: 40px;
     margin-bottom: 10px;
 }
+
 .steps-flow .step strong {
     display: block;
     color: #3081ED;
     font-size: 1.5em;
     margin-bottom: 8px;
 }
+
 .steps-flow .desc {
     font-size: 0.98em;
     color: #555;
     margin-top: 8px;
 }
+
+.step-arrow,
+.step-arrow svg,
+.step-detail,
+.step-detail.visible {
+    display: none !important;
+}
+
+.steps-flow .step:hover {
+    transform: translateY(-8px) scale(1.04);
+    box-shadow: 0 8px 32px #fbbf2422;
+}
+
 .steps-flow .arrow {
     display: flex;
     align-items: center;
     justify-content: center;
 }
+
 .step-separator {
     display: flex;
     align-items: center;
     justify-content: center;
     min-width: 48px;
-    min-height: 48px;
+    min-height: 220px;
+    height: 220px;
     margin: 0 8px;
 }
+
 .arrow-circle {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 32px;
-    height: 48px;
+    height: 32px;
 }
+
+/* Strzałka między kartami */
+.step-arrow-between {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 220px;
+    min-height: 220px;
+    max-height: 220px;
+    box-sizing: border-box;
+}
+
+.step-arrow-between svg {
+    width: 32px;
+    height: 32px;
+    display: block;
+    margin: 0 auto;
+}
+
 @media (max-width: 900px) {
-    .features, .founders, .steps-flow {
+    .founders, .steps-flow {
         flex-direction: column;
         align-items: center;
     }
-    .feature, .founder, .step {
+
+    .founder, .step, .flip-card {
         max-width: 90vw;
     }
+
     .steps-flow .arrow {
         transform: rotate(90deg);
     }
+
     .step-separator {
         margin: 12px 0;
         min-width: 0;
@@ -248,29 +535,48 @@ body {
         width: 100%;
         justify-content: center;
     }
+
     .arrow-circle {
         transform: rotate(90deg);
         width: 32px;
         height: 32px;
     }
+
+    .steps-flow {
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+    }
+
+    .step-arrow-between {
+        width: 100%;
+        height: 40px;
+        min-height: 40px;
+        max-height: 40px;
+        transform: rotate(90deg);
+        margin: 0;
+    }
 }
 
 /* Sekcja założycieli */
 .founders-section {
-    padding: 56px 0 32px 0;
+    padding: 56px 20px 32px 20px;
 }
+
 .founders-title {
     text-align: center;
     font-size: 2em;
     color: #2d3748;
     margin-bottom: 36px;
 }
+
 .founders {
     display: flex;
     justify-content: center;
     gap: 36px;
     flex-wrap: wrap;
 }
+
 .founder {
     background: #f1f5f9;
     border-radius: 16px;
@@ -279,6 +585,7 @@ body {
     padding: 24px 18px;
     width: 200px;
 }
+
 .founder img {
     width: 90px;
     height: 90px;
@@ -287,11 +594,13 @@ body {
     margin-bottom: 12px;
     border: 3px solid #3081ED;
 }
+
 .founder .name {
     font-weight: 600;
     color: #3081ED;
     font-size: 1.1em;
 }
+
 .founder-desc {
     margin-top: 10px;
     font-size: 0.98em;
@@ -304,6 +613,7 @@ body {
     text-align: center;
     margin: 40px 0 0 0;
 }
+
 .contact-btn {
     background: #3081ED;
     color: #fff;
@@ -316,6 +626,7 @@ body {
     transition: background 0.2s;
     display: inline-block;
 }
+
 .contact-btn:hover {
     background: #2563eb;
 }
@@ -335,8 +646,8 @@ section,
 .founders-section,
 .steps-section,
 .app-features-section {
-    margin-top: 32px;
-    margin-bottom: 32px;
+    margin-top: 0;
+    margin-bottom: 0;
     position: relative;
 }
 
@@ -345,41 +656,46 @@ section,
     .founders-section,
     .steps-section,
     .app-features-section {
-        margin-top: 18px;
-        margin-bottom: 18px;
+        margin-top: 0;
+        margin-bottom: 0;
     }
 }
 
-/* Uniwersalny separator sekcji */
-.section-divider {
-    width: 100%;
-    max-width: 900px;
+/* Updated grid layout for consistent spacing */
+.features-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px; /* Same as horizontal gap */
+    max-width: 1200px;
     margin: 0 auto;
-    border: none;
-    border-top: 1.5px solid #e0e7ef;
-    opacity: 0.7;
-    margin-bottom: 0;
-    margin-top: 0;
+    position: relative;
 }
 
-@media (max-width: 600px) {
-    section,
-    .founders-section,
-    .steps-section,
-    .app-features-section {
-        margin-top: 36px;
-        margin-bottom: 36px;
+.features-grid .features-row {
+    display: flex;
+    justify-content: center;
+    gap: 32px; /* Horizontal gap between cards */
+    flex-wrap: wrap;
+    position: relative;
+}
+
+@media (max-width: 900px) {
+    .features-grid {
+        gap: 32px; /* Consistent gap on mobile */
+        margin: 0 auto;
+    }
+
+    .features-grid .features-row {
+        flex-direction: column;
+        align-items: center;
+        gap: 32px; /* Same gap between mobile cards */
+    }
+
+    .features-grid .feature {
+        width: 100%;
+        min-width: 0;
+        max-width: 98vw;
+        height: auto;
     }
 }
-
-/* Uniwersalny separator sekcji */
-.section-divider {
-    width: 100%;
-    max-width: 900px;
-    margin: 0 auto 0 auto;
-    border: none;
-    border-top: 1.5px solid #e0e7ef;
-    opacity: 0.7;
-    margin-bottom: 0;
-}
-
