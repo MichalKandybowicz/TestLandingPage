@@ -264,6 +264,12 @@ body {
     color: #3081ED;
     font-size: 1.1em;
 }
+.founder-desc {
+    margin-top: 10px;
+    font-size: 0.98em;
+    color: #444;
+    line-height: 1.5;
+}
 
 /* Przycisk kontaktowy */
 .contact-cta {
@@ -295,3 +301,4 @@ footer {
     background: #f1f5f9;
     margin-top: 40px;
 }
+
