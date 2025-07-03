@@ -2,11 +2,11 @@
 body {
     font-family: 'Poppins', Arial, sans-serif;
     margin: 0;
-    background: #f4f8fb;
+    background: linear-gradient(90deg, #3081ED 0%, #2d3748 100%);
     color: #222;
 }
 .hero-logo {
-    width: 180px;
+    width: 300px;
     margin-bottom: 24px;
     display: block;
     margin-left: auto;
@@ -14,7 +14,6 @@ body {
     animation: img-pop 1.2s cubic-bezier(.5,1.8,.5,1) 0.1s both;
 }
 .hero {
-    background: linear-gradient(90deg, #3081ED 0%, #2d3748 100%);
     color: #fff;
     text-align: center;
     padding: 100px 20px 60px 20px;
@@ -31,7 +30,7 @@ body {
     z-index: 2;
 }
 .hero-img {
-    width: 140px;
+    width: 240px;
     margin-bottom: 28px;
     border-radius: 18px;
     box-shadow: 0 6px 32px #0003;
@@ -99,14 +98,14 @@ body {
 }
 
 /* Sekcja z 4 kafelkami */
-.app-features-section {
-    padding: 56px 0 32px 0;
-    background: #fff;
-}
+/*.app-features-section {*/
+/*    padding: 56px 0 32px 0;*/
+/*    background: #fff;*/
+/*}*/
 .features-title {
     text-align: center;
     font-size: 2em;
-    color: #2d3748;
+    color: #ffffff;
     margin-bottom: 36px;
 }
 .features {
@@ -145,7 +144,6 @@ body {
 
 /* Sekcja kroków (Jak to działa?) */
 .steps-section {
-    background: #e0f2fe;
     padding: 48px 0;
 }
 .steps-flow {
@@ -215,7 +213,6 @@ body {
 /* Sekcja założycieli */
 .founders-section {
     padding: 56px 0 32px 0;
-    background: #fff;
 }
 .founders-title {
     text-align: center;
