@@ -128,7 +128,45 @@ const translations = {
                 a: "Oczywiście! Możesz ustawić limity zakupu na osobę, dodać kody promocyjne, ustalić early bird pricing, ograniczenia wiekowe i wiele innych opcji. System automatycznie pilnuje wszystkich ustalonych reguł."
             }
         },
-        footer: "&copy; 2024 Biletuj. Wszelkie prawa zastrzeżone."
+        footer: "&copy; 2024 Biletuj. Wszelkie prawa zastrzeżone.",
+        earlyAccess: {
+            badge: "EARLY ACCESS",
+            title: "Pomóż nam stworzyć idealną platformę dla Ciebie",
+            description: "Zbieramy zgłoszenia od organizatorów wydarzeń, którzy chcą wpłynąć na kształt platformy. Twoje potrzeby i opinie kształtują funkcjonalności, które będziemy rozwijać w pierwszej kolejności.",
+            benefit1: {
+                title: "Wpłyń na produkt",
+                desc: "Twoje potrzeby decydują o priorytetach rozwoju funkcjonalności"
+            },
+            benefit2: {
+                title: "Pierwszeństwo dostępu",
+                desc: "Otrzymasz dostęp do platformy jako jeden z pierwszych użytkowników"
+            },
+            benefit3: {
+                title: "Preferencyjne warunki",
+                desc: "Specjalne rabaty i warunki współpracy dla early adopters"
+            },
+            stats: {
+                applications: "Zgłoszeń zebranych",
+                interviews: "Wywiadów przeprowadzonych",
+                features: "Funkcji zaplanowanych"
+            },
+            cta: {
+                title: "Chcesz mieć wpływ na rozwój Biletuj?",
+                desc: "Wypełnij krótki formularz i dołącz do grupy organizatorów, którzy współtworzą przyszłość sprzedaży biletów online.",
+                primary: "Zgłoś swoje potrzeby",
+                secondary: "Umów rozmowę (15 min)"
+            },
+            steps: {
+                step1: { title: "Zgłoś się", desc: "Opowiedz nam o swoich potrzebach" },
+                step2: { title: "Wywiad", desc: "Krótka rozmowa o Twoich wyzwaniach" },
+                step3: { title: "Współtworzenie", desc: "Razem budujemy idealne rozwiązanie" },
+                step4: { title: "Early Access", desc: "Pierwszy dostęp do platformy" }
+            },
+            testimonial: {
+                quote: "Dzięki temu, że mogłem wpłynąć na rozwój funkcji, platforma idealnie odpowiada na potrzeby moich wydarzeń",
+                author: "- Marcin, organizator konferencji tech"
+            }
+        }
     },
     en: {
         meta: {
@@ -259,6 +297,44 @@ const translations = {
                 a: "Of course! You can set purchase limits per person, add promo codes, set early bird pricing, age restrictions and many other options. The system automatically enforces all established rules."
             }
         },
-        footer: "&copy; 2024 Biletuj. All rights reserved."
+        footer: "&copy; 2024 Biletuj. All rights reserved.",
+        earlyAccess: {
+            badge: "EARLY ACCESS",
+            title: "Help us create the perfect platform for you",
+            description: "We're collecting applications from event organizers who want to influence the platform's development. Your needs and feedback shape the features we'll develop first.",
+            benefit1: {
+                title: "Influence the product",
+                desc: "Your needs determine the priorities for feature development"
+            },
+            benefit2: {
+                title: "Priority access",
+                desc: "You'll get access to the platform as one of the first users"
+            },
+            benefit3: {
+                title: "Preferential terms",
+                desc: "Special discounts and terms for early adopters"
+            },
+            stats: {
+                applications: "Applications collected",
+                interviews: "Interviews conducted",
+                features: "Features planned"
+            },
+            cta: {
+                title: "Want to influence Biletuj's development?",
+                desc: "Fill out a short form and join the group of organizers co-creating the future of online ticket sales.",
+                primary: "Submit your needs",
+                secondary: "Book a call (15 min)"
+            },
+            steps: {
+                step1: { title: "Apply", desc: "Tell us about your needs" },
+                step2: { title: "Interview", desc: "A short talk about your challenges" },
+                step3: { title: "Co-creation", desc: "We build the perfect solution together" },
+                step4: { title: "Early Access", desc: "First access to the platform" }
+            },
+            testimonial: {
+                quote: "Thanks to being able to influence feature development, the platform perfectly fits my event needs",
+                author: "- Marcin, tech conference organizer"
+            }
+        }
     }
 };
