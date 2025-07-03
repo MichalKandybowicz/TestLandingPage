@@ -214,6 +214,21 @@ body {
     align-items: center;
     justify-content: center;
 }
+.step-separator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 48px;
+    min-height: 48px;
+    margin: 0 8px;
+}
+.arrow-circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 48px;
+}
 @media (max-width: 900px) {
     .features, .founders, .steps-flow {
         flex-direction: column;
@@ -224,6 +239,19 @@ body {
     }
     .steps-flow .arrow {
         transform: rotate(90deg);
+    }
+    .step-separator {
+        margin: 12px 0;
+        min-width: 0;
+        min-height: 32px;
+        height: 32px;
+        width: 100%;
+        justify-content: center;
+    }
+    .arrow-circle {
+        transform: rotate(90deg);
+        width: 32px;
+        height: 32px;
     }
 }
 
@@ -301,4 +329,3 @@ footer {
     background: #f1f5f9;
     margin-top: 40px;
 }
-
