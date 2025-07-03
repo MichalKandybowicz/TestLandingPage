@@ -520,7 +520,7 @@ body {
     }
 
     .founder, .step, .flip-card {
-        max-width: 90vw;
+        max-width: 150vw;
     }
 
     .steps-flow .arrow {
@@ -583,7 +583,7 @@ body {
     box-shadow: 0 2px 8px #0001;
     text-align: center;
     padding: 24px 18px;
-    width: 200px;
+    width: 300px;
 }
 
 .founder img {
@@ -698,4 +698,131 @@ section,
         max-width: 98vw;
         height: auto;
     }
+}
+
+.features-quick-desc,
+.steps-quick-desc {
+    text-align: center;
+    color: #dcdcdf;
+    font-size: 1.13em;
+    margin: -36px auto 38px auto;
+    max-width: 600px;
+    line-height: 1.6;
+}
+
+.problems-section {
+    padding: 64px 20px 32px 20px;
+}
+
+.problems-desc {
+    text-align: center;
+    color: #dcdcdf;
+    font-size: 1.13em;
+    margin: -24px auto 38px auto;
+    max-width: 700px;
+    line-height: 1.6;
+}
+
+.section-subtitle {
+    text-align: center;
+    font-size: 1.3em;
+    color: #dcdcdf;
+    margin: 36px 0 18px 0;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+}
+
+.problems-icons {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 48px;
+    margin: 32px 0 24px 0;
+}
+
+.problem-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    position: relative; /* potrzebne dla przekreślenia */
+}
+
+.problem-icon::after {
+    content: "";
+    position: absolute;
+    left: 8px;
+    right: 8px;
+    top: 32px;
+    height: 4px;
+    background: repeating-linear-gradient(
+        120deg,
+        #ff5252 0 12px,
+        transparent 12px 18px
+    );
+    border-radius: 2px;
+    opacity: 0.85;
+    z-index: 2;
+    pointer-events: none;
+    transform: rotate(-18deg);
+}
+
+.problem-icon img {
+    width: 54px;
+    height: 54px;
+    filter: drop-shadow(0 2px 8px #ffc10733);
+}
+
+.problem-icon-label {
+    color: #ffb300;
+    font-weight: 600;
+    font-size: 1em;
+    margin-top: 6px;
+    text-align: center;
+    letter-spacing: 0.2px;
+}
+
+@media (max-width: 700px) {
+    .problems-icons {
+        gap: 24px;
+    }
+    .problem-icon img {
+        width: 40px;
+        height: 40px;
+    }
+    .problem-icon-label {
+        font-size: 0.95em;
+    }
+}
+
+/* Kontener sekcji dla spójnej szerokości */
+.section-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.app-features-section,
+.steps-section,
+.problems-section,
+.founders-section {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.features,
+.features-grid,
+.founders,
+.steps-flow,
+.problems-section,
+.founders-section,
+.app-features-section,
+.steps-section {
+    max-width: none;
+    margin-left: 0;
+    margin-right: 0;
+    /* szerokość kontroluje .section-container */
 }
