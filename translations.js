@@ -7,6 +7,46 @@ const translations = {
             description: "Sprzedawaj bilety i wejściówki online – prosto, szybko i wygodnie.<br>Twórz wydarzenia, przyjmuj płatności, skanuj bilety na wejściu!",
             cta: "Zapisz się na start"
         },
+        pricing: {
+            title: "Najtańsza opcja na rynku",
+            description: "Biletuj oferuje najbardziej przejrzyste i konkurencyjne ceny w Polsce. Tylko 3,5% + 1 zł od biletu – bez ukrytych opłat, abonamentów czy dodatkowych kosztów. Płacisz wyłącznie za sprzedane bilety.",
+            noHiddenFees: {
+                title: "Brak ukrytych opłat",
+                desc: "Bez subskrypcji, opłat za wypłaty czy ukrytych kosztów"
+            },
+            clearPricing: {
+                title: "Jasne ceny",
+                desc: "3,5% + 1 zł od biletu – to wszystko co płacisz"
+            },
+            feeDeducted: {
+                title: "Fee odjęte od ceny",
+                desc: "Prowizja jest automatycznie odjęta od ceny biletu"
+            },
+            examples: {
+                title: "Przykłady kosztów i zarobków"
+            },
+            table: {
+                ticketType: "Typ biletu",
+                price: "Cena",
+                fee: "Prowizja",
+                earnings: "Twój zarobek",
+                cheap: "Tani bilet",
+                medium: "Średni bilet",
+                vip: "Bilet VIP",
+                total: "Razem (100 biletów)"
+            }
+        },
+        competition: {
+            title: "Porównanie z konkurencją",
+            description: "Zobacz jak bardzo Biletuj jest tańszy od innych platform sprzedaży biletów w Polsce. Oszczędzaj nawet kilkaset złotych na każdym wydarzeniu.",
+            platform: "Platforma",
+            fee: "Prowizja",
+            hiddenFees: "Ukryte opłaty",
+            cost100: "Koszt za 100 biletów po 50zł",
+            savings: "Oszczędności",
+            savingsTitle: "Oszczędzaj nawet 375 zł na każdych 100 biletach!",
+            savingsDesc: "To oznacza więcej pieniędzy na rozwój Twojego wydarzenia, lepszą jakość czy większe zyski."
+        },
         features: {
             title: "Co oferuje Biletuj?",
             description: "Biletuj to kompleksowa platforma do sprzedaży biletów online – od rejestracji, przez płatności, aż po wygodne skanowanie wejściówek. Wszystko w jednym miejscu, bez ukrytych kosztów i zbędnych formalności.",
@@ -97,11 +137,11 @@ const translations = {
             description: "Znajdź odpowiedzi na najważniejsze pytania dotyczące korzystania z platformy Biletuj",
             pricing: {
                 q: "Ile kosztuje korzystanie z platformy?",
-                a: "Rejestracja i tworzenie wydarzeń jest całkowicie darmowe. Pobieramy jedynie prowizję od sprzedanych biletów - 3% + 1 zł od każdego biletu. Bez ukrytych opłat, bez miesięcznych abonamentów. Płacisz tylko za sprzedane bilety."
+                a: "Rejestracja i tworzenie wydarzeń jest całkowicie darmowe. Pobieramy jedynie prowizję od sprzedanych biletów - 3,5% + 1 zł od każdego biletu. Bez ukrytych opłat, bez miesięcznych abonamentów. Płacisz tylko za sprzedane bilety."
             },
             payout: {
                 q: "Jak szybko otrzymam środki ze sprzedaży?",
-                a: "Środki są wypłacane automatycznie w cyklu tygodniowym na Twoje konto bankowe. Po zakończeniu wydarzenia możesz poprosić o natychmiastową wypłatę, która realizowana jest w ciągu 24 godzin."
+                a: "Środki są wypłacane automatycznie w cyklu tygodniowym na Twoje konto bankowe. Po zakończeniu wydarzenia możesz poprosić o natychmiastową wypłatę, która realizowana jest w ciągu 24 godzin - bez dodatkowych opłat."
             },
             customization: {
                 q: "Czy mogę personalizować wygląd strony sprzedaży?",
@@ -131,7 +171,7 @@ const translations = {
         footer: "&copy; 2024 Biletuj. Wszelkie prawa zastrzeżone.",
         earlyAccess: {
             badge: "EARLY ACCESS",
-            title: "Pomóż nam stworzyć idealną platformę dla Ciebie",
+            title: "Dołącz do nas we wczesnym dostępie",
             description: "Zbieramy zgłoszenia od organizatorów wydarzeń, którzy chcą wpłynąć na kształt platformy. Twoje potrzeby i opinie kształtują funkcjonalności, które będziemy rozwijać w pierwszej kolejności.",
             benefit1: {
                 title: "Wpłyń na produkt",
@@ -154,7 +194,7 @@ const translations = {
                 title: "Chcesz mieć wpływ na rozwój Biletuj?",
                 desc: "Wypełnij krótki formularz i dołącz do grupy organizatorów, którzy współtworzą przyszłość sprzedaży biletów online.",
                 primary: "Zgłoś swoje potrzeby",
-                secondary: "Umów rozmowę"
+                secondary: "Umów rozmowę (30 min)"
             },
             steps: {
                 step1: { title: "Zgłoś się", desc: "Opowiedz nam o swoich potrzebach" },
@@ -175,6 +215,46 @@ const translations = {
         hero: {
             description: "Sell tickets and entry passes online – simple, fast and convenient.<br>Create events, accept payments, scan tickets at the entrance!",
             cta: "Sign up for launch"
+        },
+        pricing: {
+            title: "Cheapest option on the market",
+            description: "Biletuj offers the most transparent and competitive prices in Poland. Only 3.5% + 1 PLN per ticket – no hidden fees, subscriptions or additional costs. You only pay for sold tickets.",
+            noHiddenFees: {
+                title: "No hidden fees",
+                desc: "No subscriptions, payout fees or hidden costs"
+            },
+            clearPricing: {
+                title: "Clear pricing",
+                desc: "3.5% + 1 PLN per ticket – that's all you pay"
+            },
+            feeDeducted: {
+                title: "Fee deducted from price",
+                desc: "Commission is automatically deducted from ticket price"
+            },
+            examples: {
+                title: "Cost and earnings examples"
+            },
+            table: {
+                ticketType: "Ticket type",
+                price: "Price",
+                fee: "Commission",
+                earnings: "Your earnings",
+                cheap: "Cheap ticket",
+                medium: "Medium ticket",
+                vip: "VIP ticket",
+                total: "Total (100 tickets)"
+            }
+        },
+        competition: {
+            title: "Competition comparison",
+            description: "See how much cheaper Biletuj is compared to other ticket sales platforms in Poland. Save even hundreds of PLN on every event.",
+            platform: "Platform",
+            fee: "Commission",
+            hiddenFees: "Hidden fees",
+            cost100: "Cost for 100 tickets at 50 PLN",
+            savings: "Savings",
+            savingsTitle: "Save up to 375 PLN on every 100 tickets!",
+            savingsDesc: "This means more money for your event development, better quality or higher profits."
         },
         features: {
             title: "What does Biletuj offer?",
@@ -266,11 +346,11 @@ const translations = {
             description: "Find answers to the most important questions about using the Biletuj platform",
             pricing: {
                 q: "How much does using the platform cost?",
-                a: "Registration and event creation is completely free. We only charge a commission on sold tickets - 3% + 1 PLN per ticket. No hidden fees, no monthly subscriptions. You only pay for sold tickets."
+                a: "Registration and event creation is completely free. We only charge a commission on sold tickets - 3.5% + 1 PLN per ticket. No hidden fees, no monthly subscriptions. You only pay for sold tickets."
             },
             payout: {
                 q: "How quickly will I receive funds from sales?",
-                a: "Funds are automatically paid out on a weekly cycle to your bank account. After the event ends, you can request an immediate payout, which is processed within 24 hours."
+                a: "Funds are automatically paid out on a weekly cycle to your bank account. After the event ends, you can request an immediate payout, which is processed within 24 hours - with no additional fees."
             },
             customization: {
                 q: "Can I customize the appearance of the sales page?",
@@ -286,7 +366,7 @@ const translations = {
             },
             support: {
                 q: "What if I need technical support?",
-                a: "We offer 24/7 technical support in Polish. You can contact us via email, website chat or phone. Additionally, we provide detailed tutorials and an online knowledge base."
+                a: "We offer 24/7 technical support in English and Polish. You can contact us via email, website chat or phone. Additionally, we provide detailed tutorials and an online knowledge base."
             },
             gdpr: {
                 q: "Is the system GDPR compliant?",
@@ -300,7 +380,7 @@ const translations = {
         footer: "&copy; 2024 Biletuj. All rights reserved.",
         earlyAccess: {
             badge: "EARLY ACCESS",
-            title: "Help us create the perfect platform for you",
+            title: "Join us in early access",
             description: "We're collecting applications from event organizers who want to influence the platform's development. Your needs and feedback shape the features we'll develop first.",
             benefit1: {
                 title: "Influence the product",
@@ -323,7 +403,7 @@ const translations = {
                 title: "Want to influence Biletuj's development?",
                 desc: "Fill out a short form and join the group of organizers co-creating the future of online ticket sales.",
                 primary: "Submit your needs",
-                secondary: "Book a call"
+                secondary: "Book a call (30 min)"
             },
             steps: {
                 step1: { title: "Apply", desc: "Tell us about your needs" },
