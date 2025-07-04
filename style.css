@@ -12,6 +12,7 @@ body {
     color: #222;
     line-height: 1.6;
     position: relative;
+    font-size: 1rem; /* Base font size */
 }
 
 @keyframes gradientShift {
@@ -318,7 +319,7 @@ input:checked + .slider:before {
 }
 
 .early-access h2 {
-    font-size: 2.5em;
+    font-size: 3rem; /* Zwiększony heading */
     margin-bottom: 20px;
     font-weight: 700;
     color: #ffffff;
@@ -333,6 +334,7 @@ input:checked + .slider:before {
     opacity: 0.9;
     line-height: 1.6;
     color: rgba(255, 255, 255, 0.9);
+    text-align: left; /* Zmienione z center na left */
 }
 
 /* SPÓJNE STYLE DLA WSZYSTKICH KART - GLASS EFFECT */
@@ -456,12 +458,14 @@ input:checked + .slider:before {
     opacity: 1;
 }
 
-/* Ikony w kartach */
+/* Ikony w kartach - USUNIĘTY FILTR aby były kolorowe */
 .card-front img {
     width: 60px;
     margin-bottom: 16px;
-    filter: brightness(0) invert(1);
-    opacity: 0.9;
+    /* Usunięty: filter: brightness(0) invert(1); */
+    opacity: 1; /* Zwiększona przezroczystość dla lepszej widoczności */
+    border-radius: 8px; /* Dodane lekko zaokrąglone rogi */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Dodany cień dla lepszego kontrastu */
 }
 
 .card-front h3,
@@ -478,6 +482,7 @@ input:checked + .slider:before {
     margin: 0;
     font-size: 0.95em;
     line-height: 1.5;
+    text-align: left; /* Zmienione z center na left */
 }
 
 /* SPECJALNE STYLE DLA KROKÓW - DOSTOSOWANE */
@@ -557,6 +562,7 @@ input:checked + .slider:before {
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
+    text-align: left; /* Zmienione z center na left */
 }
 
 .cta-buttons {
@@ -637,6 +643,7 @@ input:checked + .slider:before {
     font-size: 1.1em;
     margin-bottom: 10px;
     opacity: 0.9;
+    text-align: left; /* Zmienione z center na left */
 }
 
 .testimonial-author {
@@ -677,7 +684,7 @@ input:checked + .slider:before {
 
 .section-title {
     text-align: center;
-    font-size: 2.2em;
+    font-size: 3rem; /* Zwiększony heading */
     color: #ffffff;
     margin-bottom: 32px;
     font-weight: 700;
@@ -687,7 +694,7 @@ input:checked + .slider:before {
 }
 
 .section-desc {
-    text-align: center;
+    text-align: left; /* Zmienione z center na left */
     color: rgba(255, 255, 255, 0.9);
     font-size: 1.13em;
     margin-bottom: 48px;
@@ -700,7 +707,7 @@ input:checked + .slider:before {
 
 .section-subtitle {
     text-align: center;
-    font-size: 1.4em;
+    font-size: 2rem; /* Zwiększony heading */
     color: #ffffff;
     margin: 48px 0 24px 0;
     font-weight: 600;
@@ -751,7 +758,7 @@ input:checked + .slider:before {
     grid-row: 2;
 }
 
-/* IKONY PROBLEMÓW */
+/* IKONY PROBLEMÓW z powiększonymi ikonami x2 i dostosowanym czerwonym X */
 .problems-icons {
     display: flex;
     justify-content: center;
@@ -768,28 +775,30 @@ input:checked + .slider:before {
     position: relative;
 }
 
+/* Precyzyjnie pozycjonowany czerwony X na środku powiększonej ikony */
 .problem-icon::after {
-    content: "";
+    content: "✗";
     position: absolute;
-    left: 8px;
-    right: 8px;
-    top: 32px;
-    height: 4px;
-    background: repeating-linear-gradient(
-            120deg,
-            #ff5252 0 12px,
-            transparent 12px 18px
-    );
-    border-radius: 2px;
-    opacity: 0.85;
+    top: 0; /* Pozycja dokładnie na ikonie */
+    left: 50%;
+    width: 108px; /* Powiększona szerokość ikony na desktop (54px * 2) */
+    height: 108px; /* Powiększona wysokość ikony na desktop (54px * 2) */
+    transform: translateX(-50%);
+    font-size: 7em; /* Proporcjonalnie zwiększony rozmiar X (3.5em * 2) */
+    color: #ff5252;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
     z-index: 2;
     pointer-events: none;
-    transform: rotate(-18deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
 }
 
 .problem-icon img {
-    width: 54px;
-    height: 54px;
+    width: 108px; /* Powiększona ikona (54px * 2) */
+    height: 108px; /* Powiększona ikona (54px * 2) */
     filter: drop-shadow(0 2px 8px rgba(255, 193, 7, 0.2));
 }
 
@@ -802,7 +811,7 @@ input:checked + .slider:before {
     text-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
 }
 
-/* FAQ STYLES - GLASS EFFECT */
+/* FAQ STYLES - GLASS EFFECT z poprawionymi znakami */
 .faq-container {
     max-width: 800px;
     margin: 0 auto;
@@ -848,6 +857,7 @@ input:checked + .slider:before {
     color: #ffffff;
     font-size: 1.1em;
     font-weight: 600;
+    text-align: left; /* Zmienione z center na left */
 }
 
 .faq-toggle {
@@ -860,14 +870,14 @@ input:checked + .slider:before {
 }
 
 .faq-item.active .faq-toggle {
-    transform: rotate(45deg);
+    transform: none; /* Usunięte dziwne obrócenie */
 }
 
 .faq-answer {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease;
-    background: rgba(251, 191, 36, 0.1);
+    background: rgba(255, 255, 255, 0.1); /* Zmienione tło na takie samo jak pytania */
 }
 
 .faq-answer p {
@@ -875,6 +885,7 @@ input:checked + .slider:before {
     margin: 0;
     color: rgba(255, 255, 255, 0.9);
     line-height: 1.6;
+    text-align: left; /* Zmienione z center na left */
 }
 
 /* KONTAKT I STOPKA */
@@ -936,8 +947,12 @@ footer {
 
     .section-title,
     .early-access h2 {
-        font-size: 1.8em;
+        font-size: 2.5rem; /* Dostosowane dla mobile */
         margin-bottom: 24px;
+    }
+
+    .section-subtitle {
+        font-size: 1.8rem; /* Dostosowane dla mobile */
     }
 
     .section-desc,
@@ -974,8 +989,15 @@ footer {
     }
 
     .problem-icon img {
-        width: 40px;
-        height: 40px;
+        width: 80px; /* Powiększona ikona dla mobile (40px * 2) */
+        height: 80px; /* Powiększona ikona dla mobile (40px * 2) */
+    }
+
+    /* Dostosowanie X dla mobile - powiększone ikony */
+    .problem-icon::after {
+        width: 80px; /* Szerokość ikony na mobile powiększona */
+        height: 80px; /* Wysokość ikony na mobile powiększona */
+        font-size: 2em; /* Proporcjonalnie dostosowany X (2.5em * 2) */
     }
 
     .problem-icon-label {
@@ -1050,7 +1072,23 @@ footer {
 
     .section-title,
     .early-access h2 {
-        font-size: 1.5em;
+        font-size: 2rem; /* Dostosowane dla bardzo małych ekranów */
+    }
+
+    .section-subtitle {
+        font-size: 1.5rem; /* Dostosowane dla bardzo małych ekranów */
+    }
+
+    .problem-icon img {
+        width: 70px; /* Dostosowane dla bardzo małych ekranów, nadal powiększone */
+        height: 70px;
+    }
+
+    /* Dalsze dostosowanie X dla bardzo małych ekranów */
+    .problem-icon::after {
+        width: 70px;
+        height: 70px;
+        font-size: 4em; /* Dostosowane proporcjonalnie */
     }
 
     .faq-question {
