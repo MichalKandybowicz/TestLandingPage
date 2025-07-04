@@ -17,18 +17,54 @@
     <script src="translations.js"></script>
 </head>
 <body>
-<!-- Toggle języka -->
-<div class="language-toggle">
-    <span class="lang-label active" data-lang="pl">PL</span>
-    <div class="toggle-switch">
-        <input type="checkbox" id="langToggle">
-        <label for="langToggle" class="slider"></label>
+<!-- Menu główne -->
+<div class="main-menu">
+    <!-- Toggle języka -->
+    <div class="language-toggle">
+        <span class="lang-label active" data-lang="pl">PL</span>
+        <div class="toggle-switch">
+            <input type="checkbox" id="langToggle">
+            <label for="langToggle" class="slider"></label>
+        </div>
+        <span class="lang-label" data-lang="en">EN</span>
     </div>
-    <span class="lang-label" data-lang="en">EN</span>
+
+    <!-- Przycisk menu -->
+    <div class="menu-button" id="menuButton">
+        <div class="menu-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+
+    <!-- Menu nawigacyjne -->
+    <nav class="navigation-menu" id="navigationMenu">
+        <div class="menu-header">
+            <h3 data-i18n="menu.title">Menu</h3>
+        </div>
+        <ul class="menu-list">
+            <li><a href="#home" data-i18n="menu.home">Start</a></li>
+            <li><a href="#pricing" data-i18n="menu.pricing">Ceny</a></li>
+            <li><a href="#early-access" data-i18n="menu.earlyAccess">Early Access</a></li>
+            <li><a href="#competition" data-i18n="menu.competition">Porównanie</a></li>
+            <li><a href="#features" data-i18n="menu.features">Funkcje</a></li>
+            <li><a href="#problems" data-i18n="menu.problems">Problemy</a></li>
+            <li><a href="#how-it-works" data-i18n="menu.howItWorks">Jak to działa</a></li>
+            <li><a href="#founders" data-i18n="menu.founders">Założyciele</a></li>
+            <li><a href="#faq" data-i18n="menu.faq">FAQ</a></li>
+        </ul>
+        <div class="menu-footer">
+            <a href="mailto:kontakt@biletuj.pl" class="menu-cta" data-i18n="hero.cta">Zapisz się na start</a>
+        </div>
+    </nav>
 </div>
 
+<!-- Overlay dla menu -->
+<div class="menu-overlay" id="menuOverlay"></div>
+
 <!-- Sekcja główna (hero) -->
-<section class="hero">
+<section class="hero" id="home">
     <div class="hero-content">
         <img src="zlogo.png" alt="Logo Biletuj" class="hero-logo">
         <p class="hero-desc" data-i18n="hero.description">
@@ -40,7 +76,7 @@
 </section>
 
 <!-- Sekcja - Jesteśmy najtańszą opcją -->
-<section class="section pricing">
+<section class="section pricing" id="pricing">
     <h2 class="section-title" data-i18n="pricing.title">Najtańsza opcja na rynku</h2>
     <div class="section-desc" data-i18n="pricing.description">
         Biletuj oferuje najbardziej przejrzyste i konkurencyjne ceny w Polsce. Tylko 3,5% + 1 zł od biletu – bez ukrytych opłat, abonamentów czy dodatkowych kosztów. Płacisz wyłącznie za sprzedane bilety.
@@ -107,7 +143,7 @@
 </section>
 
 <!-- Sekcja Early Access -->
-<section class="early-access">
+<section class="early-access" id="early-access">
     <div class="early-access-content">
         <h2 data-i18n="earlyAccess.title">Dołącz do nas we wczesnym dostępie</h2>
         <p class="early-access-desc" data-i18n="earlyAccess.description">
@@ -162,7 +198,7 @@
 </section>
 
 <!-- Sekcja porównanie z konkurencją -->
-<section class="section competition">
+<section class="section competition" id="competition">
     <h2 class="section-title" data-i18n="competition.title">Porównanie z konkurencją</h2>
     <div class="section-desc" data-i18n="competition.description">
         Zobacz jak bardzo Biletuj jest tańszy od innych platform sprzedaży biletów w Polsce. Oszczędzaj nawet kilkaset złotych na każdym wydarzeniu.
@@ -228,7 +264,7 @@
 </section>
 
 <!-- Sekcja z funkcjonalnościami - 5 kart w układzie piramidy -->
-<section class="section features">
+<section class="section features" id="features">
     <h2 class="section-title" data-i18n="features.title">Co oferuje Biletuj?</h2>
     <div class="section-desc" data-i18n="features.description">
         Biletuj to kompleksowa platforma do sprzedaży biletów online – od rejestracji, przez płatności, aż po wygodne
@@ -326,7 +362,7 @@
 </section>
 
 <!-- Sekcja: Problemy i grupa docelowa -->
-<section class="section problems">
+<section class="section problems" id="problems">
     <h2 class="section-title" data-i18n="problems.title">Jakie problemy rozwiązuje Biletuj?</h2>
     <div class="section-desc" data-i18n="problems.description">
         Organizatorzy wydarzeń często borykają się z ręczną sprzedażą biletów, chaosem przy wejściu, brakiem kontroli
@@ -356,7 +392,7 @@
 </section>
 
 <!-- Sekcja "Jak to działa?" - 5 kart w układzie piramidy -->
-<section class="section how-it-works">
+<section class="section how-it-works" id="how-it-works">
     <h2 class="section-title" data-i18n="howItWorks.title">Jak to działa?</h2>
     <div class="section-desc" data-i18n="howItWorks.description">
         Biletuj to nowoczesna platforma, która pozwala Ci w kilka minut zorganizować sprzedaż biletów – od rejestracji
@@ -452,7 +488,7 @@
 </section>
 
 <!-- Sekcja założycieli - 3 karty w jednym rzędzie -->
-<section class="section founders">
+<section class="section founders" id="founders">
     <h2 class="section-title" data-i18n="founders.title">Założyciele projektu</h2>
     <div class="cards-grid">
         <div class="card">
@@ -512,7 +548,7 @@
 </section>
 
 <!-- Sekcja FAQ -->
-<section class="section faq">
+<section class="section faq" id="faq">
     <h2 class="section-title" data-i18n="faq.title">Najczęściej zadawane pytania</h2>
     <div class="section-desc" data-i18n="faq.description">
         Znajdź odpowiedzi na najważniejsze pytania dotyczące korzystania z platformy Biletuj
@@ -656,11 +692,25 @@
         document.documentElement.lang = lang;
     }
 
+    // Funkcja smooth scroll do sekcji
+    function scrollToSection(sectionId) {
+        const element = document.querySelector(sectionId);
+        if (element) {
+            element.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    }
+
     // Inicjalizacja po załadowaniu strony
     document.addEventListener('DOMContentLoaded', function () {
         const langToggle = document.getElementById('langToggle');
         const plLabel = document.querySelector('.lang-label[data-lang="pl"]');
         const enLabel = document.querySelector('.lang-label[data-lang="en"]');
+        const menuButton = document.getElementById('menuButton');
+        const navigationMenu = document.getElementById('navigationMenu');
+        const menuOverlay = document.getElementById('menuOverlay');
 
         // Sprawdź zapisany język w localStorage
         const savedLang = localStorage.getItem('selectedLanguage') || 'pl';
@@ -687,6 +737,45 @@
             plLabel.classList.toggle('active', !isEnglish);
             enLabel.classList.toggle('active', isEnglish);
         }
+
+        // Obsługa menu
+        function toggleMenu() {
+            const isMenuOpen = navigationMenu.classList.contains('open');
+
+            if (isMenuOpen) {
+                navigationMenu.classList.remove('open');
+                menuOverlay.classList.remove('visible');
+                menuButton.classList.remove('open');
+                document.body.style.overflow = '';
+            } else {
+                navigationMenu.classList.add('open');
+                menuOverlay.classList.add('visible');
+                menuButton.classList.add('open');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        // Event listenery dla menu
+        menuButton.addEventListener('click', toggleMenu);
+        menuOverlay.addEventListener('click', toggleMenu);
+
+        // Obsługa linków nawigacyjnych
+        const navLinks = document.querySelectorAll('.menu-list a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const sectionId = this.getAttribute('href');
+                scrollToSection(sectionId);
+                toggleMenu(); // Zamknij menu po kliknięciu
+            });
+        });
+
+        // Zamknij menu przy naciśnięciu ESC
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && navigationMenu.classList.contains('open')) {
+                toggleMenu();
+            }
+        });
 
         // FAQ functionality
         const faqItems = document.querySelectorAll('.faq-item');

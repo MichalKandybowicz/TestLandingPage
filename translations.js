@@ -7,6 +7,18 @@ const translations = {
             description: "Sprzedawaj bilety i wejściówki online – prosto, szybko i wygodnie.<br>Twórz wydarzenia, przyjmuj płatności, skanuj bilety na wejściu!",
             cta: "Zapisz się na start"
         },
+        menu: {
+            title: "Menu",
+            home: "Start",
+            pricing: "Ceny",
+            earlyAccess: "Early Access",
+            competition: "Porównanie",
+            features: "Funkcje",
+            problems: "Problemy",
+            howItWorks: "Jak to działa",
+            founders: "Założyciele",
+            faq: "FAQ"
+        },
         pricing: {
             title: "Najtańsza opcja na rynku",
             description: "Biletuj oferuje najbardziej przejrzyste i konkurencyjne ceny w Polsce. Tylko 3,5% + 1 zł od biletu – bez ukrytych opłat, abonamentów czy dodatkowych kosztów. Płacisz wyłącznie za sprzedane bilety.",
@@ -197,10 +209,10 @@ const translations = {
                 secondary: "Umów rozmowę (30 min)"
             },
             steps: {
-                step1: { title: "Zgłoś się", desc: "Opowiedz nam o swoich potrzebach" },
-                step2: { title: "Wywiad", desc: "Krótka rozmowa o Twoich wyzwaniach" },
-                step3: { title: "Współtworzenie", desc: "Razem budujemy idealne rozwiązanie" },
-                step4: { title: "Early Access", desc: "Pierwszy dostęp do platformy" }
+                step1: {title: "Zgłoś się", desc: "Opowiedz nam o swoich potrzebach"},
+                step2: {title: "Wywiad", desc: "Krótka rozmowa o Twoich wyzwaniach"},
+                step3: {title: "Współtworzenie", desc: "Razem budujemy idealne rozwiązanie"},
+                step4: {title: "Early Access", desc: "Pierwszy dostęp do platformy"}
             },
             testimonial: {
                 quote: "Dzięki temu, że mogłem wpłynąć na rozwój funkcji, platforma idealnie odpowiada na potrzeby moich wydarzeń",
@@ -209,6 +221,18 @@ const translations = {
         }
     },
     en: {
+        menu: {
+            title: "Menu",
+            home: "Home",
+            pricing: "Pricing",
+            earlyAccess: "Early Access",
+            competition: "Comparison",
+            features: "Features",
+            problems: "Problems",
+            howItWorks: "How it works",
+            founders: "Founders",
+            faq: "FAQ"
+        },
         meta: {
             title: "Biletuj – Online ticket and entry pass sales"
         },
@@ -406,10 +430,10 @@ const translations = {
                 secondary: "Book a call (30 min)"
             },
             steps: {
-                step1: { title: "Apply", desc: "Tell us about your needs" },
-                step2: { title: "Interview", desc: "A short talk about your challenges" },
-                step3: { title: "Co-creation", desc: "We build the perfect solution together" },
-                step4: { title: "Early Access", desc: "First access to the platform" }
+                step1: {title: "Apply", desc: "Tell us about your needs"},
+                step2: {title: "Interview", desc: "A short talk about your challenges"},
+                step3: {title: "Co-creation", desc: "We build the perfect solution together"},
+                step4: {title: "Early Access", desc: "First access to the platform"}
             },
             testimonial: {
                 quote: "Thanks to being able to influence feature development, the platform perfectly fits my event needs",

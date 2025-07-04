@@ -12,7 +12,7 @@ body {
     color: #222;
     line-height: 1.6;
     position: relative;
-    font-size: 1rem; /* Base font size */
+    font-size: 1rem;
 }
 
 @keyframes gradientShift {
@@ -21,7 +21,6 @@ body {
     100% { background-position: 0% 50%; }
 }
 
-/* Dodatkowa warstwa z subtelnymi kształtami */
 body::before {
     content: '';
     position: fixed;
@@ -42,15 +41,22 @@ body::before {
     50% { opacity: 0.7; transform: scale(1.05); }
 }
 
-/* TOGGLE JĘZYKA */
-.language-toggle {
+/* MENU GŁÓWNE */
+.main-menu {
     position: fixed;
     top: 20px;
     right: 20px;
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 15px;
     z-index: 1000;
+}
+
+/* TOGGLE JĘZYKA */
+.language-toggle {
+    display: flex;
+    align-items: center;
+    gap: 12px;
     background: rgba(255, 255, 255, 0.95);
     padding: 12px 16px;
     border-radius: 25px;
@@ -134,60 +140,160 @@ input:checked + .slider:before {
     transform: scale(1.05);
 }
 
-/* Responsywność dla toggle'a */
-@media (max-width: 768px) {
-    .language-toggle {
-        top: 15px;
-        right: 15px;
-        padding: 10px 14px;
-        gap: 10px;
-    }
-
-    .lang-label {
-        font-size: 0.8em;
-        padding: 3px 6px;
-    }
-
-    .toggle-switch {
-        width: 45px;
-        height: 24px;
-    }
-
-    .slider:before {
-        height: 18px;
-        width: 18px;
-        left: 3px;
-        bottom: 3px;
-    }
-
-    input:checked + .slider:before {
-        transform: translateX(21px);
-    }
+/* PRZYCISK MENU HAMBURGERA */
+.menu-button {
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
 }
 
-@media (max-width: 480px) {
-    .language-toggle {
-        top: 10px;
-        right: 10px;
-        padding: 8px 12px;
-        gap: 8px;
-    }
+.menu-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+}
 
-    .toggle-switch {
-        width: 40px;
-        height: 22px;
-    }
+.menu-icon {
+    width: 24px;
+    height: 18px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 
-    .slider:before {
-        height: 16px;
-        width: 16px;
-        left: 3px;
-        bottom: 3px;
-    }
+.menu-icon span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background: #3081ED;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
 
-    input:checked + .slider:before {
-        transform: translateX(18px);
-    }
+.menu-button.open .menu-icon span:nth-child(1) {
+    transform: rotate(45deg);
+    transform-origin: 10% 10%;
+}
+
+.menu-button.open .menu-icon span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-button.open .menu-icon span:nth-child(3) {
+    transform: rotate(-45deg);
+    transform-origin: 10% 90%;
+}
+
+/* MENU NAWIGACYJNE */
+.navigation-menu {
+    position: fixed;
+    top: 0;
+    right: -350px;
+    width: 350px;
+    height: 100vh;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    box-shadow: -5px 0 30px rgba(0, 0, 0, 0.1);
+    transition: right 0.3s ease;
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    overflow-y: auto;
+}
+
+.navigation-menu.open {
+    right: 0;
+}
+
+.menu-header {
+    padding: 30px 30px 20px 30px;
+    border-bottom: 1px solid rgba(48, 129, 237, 0.1);
+}
+
+.menu-header h3 {
+    margin: 0;
+    color: #3081ED;
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
+.menu-list {
+    list-style: none;
+    padding: 20px 0;
+    margin: 0;
+    flex: 1;
+}
+
+.menu-list li {
+    margin: 0;
+}
+
+.menu-list a {
+    display: block;
+    padding: 15px 30px;
+    color: #374151;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.1em;
+    transition: all 0.3s ease;
+    border-left: 4px solid transparent;
+}
+
+.menu-list a:hover {
+    background: rgba(48, 129, 237, 0.1);
+    border-left-color: #3081ED;
+    color: #3081ED;
+    transform: translateX(5px);
+}
+
+.menu-footer {
+    padding: 20px 30px 30px 30px;
+    border-top: 1px solid rgba(48, 129, 237, 0.1);
+}
+
+.menu-cta {
+    display: block;
+    background: #fbbf24;
+    color: #1f2937;
+    text-align: center;
+    padding: 15px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: all 0.3s ease;
+}
+
+.menu-cta:hover {
+    background: #f59e0b;
+    transform: translateY(-2px);
+}
+
+/* OVERLAY DLA MENU */
+.menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 998;
+}
+
+.menu-overlay.visible {
+    opacity: 1;
+    visibility: visible;
 }
 
 /* HERO SECTION */
@@ -513,21 +619,8 @@ input:checked + .slider:before {
     z-index: 2;
 }
 
-.beta-badge {
-    background: #fbbf24;
-    color: #1f2937;
-    padding: 10px 20px;
-    border-radius: 25px;
-    font-size: 0.85em;
-    font-weight: bold;
-    display: inline-block;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
 .early-access h2 {
-    font-size: 3rem; /* Zwiększony heading */
+    font-size: 3rem;
     margin-bottom: 20px;
     font-weight: 700;
     color: #ffffff;
@@ -542,10 +635,10 @@ input:checked + .slider:before {
     opacity: 0.9;
     line-height: 1.6;
     color: rgba(255, 255, 255, 0.9);
-    text-align: left; /* Zmienione z center na left */
+    text-align: left;
 }
 
-/* SPÓJNE STYLE DLA WSZYSTKICH KART - GLASS EFFECT */
+/* SPÓJNE STYLE DLA WSZYSTKICH KART */
 .benefit,
 .card {
     background: rgba(255, 255, 255, 0.1);
@@ -575,7 +668,6 @@ input:checked + .slider:before {
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
 }
 
-/* Benefits Grid - Early Access - TERAZ UŻYWA TEGO SAMEGO STYLU CO CARDS */
 .benefits-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -583,7 +675,6 @@ input:checked + .slider:before {
     margin: 50px 0;
 }
 
-/* SPÓJNE STYLE DLA IKON - wszystkie ikony używają tego samego stylu */
 .benefit img {
     width: 60px;
     margin-bottom: 16px;
@@ -604,12 +695,12 @@ input:checked + .slider:before {
     font-size: 0.95em;
     line-height: 1.5;
     color: rgba(255, 255, 255, 0.85);
-    text-align: left; /* Zmienione z center na left */
+    text-align: left;
 }
 
-/* REDEFINICJA STANDARDOWYCH KART - GLASS EFFECT */
+/* REDEFINICJA KART */
 .card {
-    perspective: none; /* Usuwamy 3D flip */
+    perspective: none;
     width: 280px;
     height: 320px;
     cursor: pointer;
@@ -618,7 +709,6 @@ input:checked + .slider:before {
     overflow: hidden;
 }
 
-/* Usuwamy stare style card-inner i flip */
 .card-inner {
     width: 100%;
     height: 100%;
@@ -645,7 +735,6 @@ input:checked + .slider:before {
     box-shadow: none;
 }
 
-/* Pokazujemy tylko front na stałe, bez flipa */
 .card-front {
     position: relative;
     opacity: 1;
@@ -661,7 +750,6 @@ input:checked + .slider:before {
     transition: opacity 0.3s ease;
 }
 
-/* Hover pokazuje back zamiast flip */
 .card:hover .card-front {
     opacity: 0;
 }
@@ -670,7 +758,6 @@ input:checked + .slider:before {
     opacity: 1;
 }
 
-/* Ikony w kartach - teraz kolorowe i spójne */
 .card-front img {
     width: 60px;
     margin-bottom: 16px;
@@ -693,10 +780,10 @@ input:checked + .slider:before {
     margin: 0;
     font-size: 0.95em;
     line-height: 1.5;
-    text-align: left; /* Zmienione z center na left */
+    text-align: left;
 }
 
-/* SPECJALNE STYLE DLA KROKÓW - DOSTOSOWANE */
+/* SPECJALNE STYLE */
 .step-number {
     background: #fbbf24;
     color: #1f2937;
@@ -712,7 +799,6 @@ input:checked + .slider:before {
     box-shadow: 0 4px 15px rgba(251, 191, 36, 0.4);
 }
 
-/* SPECJALNE STYLE DLA ZAŁOŻYCIELI - DOSTOSOWANE */
 .founder-img {
     width: 80px !important;
     height: 80px;
@@ -723,7 +809,7 @@ input:checked + .slider:before {
     box-shadow: 0 4px 15px rgba(251, 191, 36, 0.3);
 }
 
-/* Collection Stats */
+/* COLLECTION STATS */
 .collection-stats {
     display: flex;
     justify-content: center;
@@ -752,7 +838,7 @@ input:checked + .slider:before {
     display: block;
 }
 
-/* CTA Section */
+/* CTA SECTION */
 .cta-section {
     background: rgba(255, 255, 255, 0.1);
     padding: 40px 30px;
@@ -773,7 +859,7 @@ input:checked + .slider:before {
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
-    text-align: left; /* Zmienione z center na left */
+    text-align: left;
 }
 
 .cta-buttons {
@@ -814,54 +900,6 @@ input:checked + .slider:before {
     transform: translateY(-2px);
 }
 
-/* Process Steps */
-.process-steps {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    margin: 60px 0 40px 0;
-    flex-wrap: wrap;
-}
-
-.step {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    max-width: 200px;
-    text-align: left;
-}
-
-.step-content h4 {
-    margin: 0 0 5px 0;
-    font-size: 1em;
-    color: white;
-}
-
-.step-content p {
-    margin: 0;
-    font-size: 0.85em;
-    opacity: 0.8;
-    color: rgba(255, 255, 255, 0.8);
-}
-
-/* Social Proof Mini */
-.social-proof-mini {
-    margin-top: 40px;
-    font-style: italic;
-}
-
-.testimonial-quote {
-    font-size: 1.1em;
-    margin-bottom: 10px;
-    opacity: 0.9;
-    text-align: left; /* Zmienione z center na left */
-}
-
-.testimonial-author {
-    font-size: 0.9em;
-    opacity: 0.7;
-}
-
 /* STANDARDOWE SEKCJE */
 .section {
     max-width: 1200px;
@@ -889,13 +927,9 @@ input:checked + .slider:before {
     }
 }
 
-.section-divider {
-    display: none;
-}
-
 .section-title {
     text-align: center;
-    font-size: 3rem; /* Zwiększony heading */
+    font-size: 3rem;
     color: #ffffff;
     margin-bottom: 32px;
     font-weight: 700;
@@ -905,7 +939,7 @@ input:checked + .slider:before {
 }
 
 .section-desc {
-    text-align: left; /* Zmienione z center na left */
+    text-align: left;
     color: rgba(255, 255, 255, 0.9);
     font-size: 1.13em;
     margin-bottom: 48px;
@@ -918,7 +952,7 @@ input:checked + .slider:before {
 
 .section-subtitle {
     text-align: center;
-    font-size: 2rem; /* Zwiększony heading */
+    font-size: 2rem;
     color: #ffffff;
     margin: 48px 0 24px 0;
     font-weight: 600;
@@ -926,16 +960,13 @@ input:checked + .slider:before {
     text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
-/* UNIWERSALNY SYSTEM GRID DLA KART */
+/* GRID SYSTEM */
 .cards-grid {
     display: grid;
     gap: 32px;
     justify-items: center;
     max-width: 1000px;
     margin: 0 auto;
-}
-
-.cards-grid {
     grid-template-columns: repeat(3, 1fr);
 }
 
@@ -969,7 +1000,7 @@ input:checked + .slider:before {
     grid-row: 2;
 }
 
-/* IKONY PROBLEMÓW z powiększonymi ikonami x2 i dostosowanym czerwonym X */
+/* IKONY PROBLEMÓW */
 .problems-icons {
     display: flex;
     justify-content: center;
@@ -986,16 +1017,15 @@ input:checked + .slider:before {
     position: relative;
 }
 
-/* Precyzyjnie pozycjonowany czerwony X na środku powiększonej ikony */
 .problem-icon::after {
     content: "✗";
     position: absolute;
-    top: 0; /* Pozycja dokładnie na ikonie */
+    top: 0;
     left: 50%;
-    width: 108px; /* Powiększona szerokość ikony na desktop (54px * 2) */
-    height: 108px; /* Powiększona wysokość ikony na desktop (54px * 2) */
+    width: 108px;
+    height: 108px;
     transform: translateX(-50%);
-    font-size: 7em; /* Proporcjonalnie zwiększony rozmiar X (3.5em * 2) */
+    font-size: 7em;
     color: #ff5252;
     font-weight: bold;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
@@ -1008,8 +1038,8 @@ input:checked + .slider:before {
 }
 
 .problem-icon img {
-    width: 108px; /* Powiększona ikona (54px * 2) */
-    height: 108px; /* Powiększona ikona (54px * 2) */
+    width: 108px;
+    height: 108px;
     filter: drop-shadow(0 2px 8px rgba(255, 193, 7, 0.2));
 }
 
@@ -1022,7 +1052,7 @@ input:checked + .slider:before {
     text-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
 }
 
-/* FAQ STYLES - GLASS EFFECT z poprawionymi znakami */
+/* FAQ STYLES */
 .faq-container {
     max-width: 800px;
     margin: 0 auto;
@@ -1068,7 +1098,7 @@ input:checked + .slider:before {
     color: #ffffff;
     font-size: 1.1em;
     font-weight: 600;
-    text-align: left; /* Zmienione z center na left */
+    text-align: left;
 }
 
 .faq-toggle {
@@ -1080,15 +1110,11 @@ input:checked + .slider:before {
     text-align: center;
 }
 
-.faq-item.active .faq-toggle {
-    transform: none; /* Usunięte dziwne obrócenie */
-}
-
 .faq-answer {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease;
-    background: rgba(255, 255, 255, 0.1); /* Zmienione tło na takie samo jak pytania */
+    background: rgba(255, 255, 255, 0.1);
 }
 
 .faq-answer p {
@@ -1096,7 +1122,7 @@ input:checked + .slider:before {
     margin: 0;
     color: rgba(255, 255, 255, 0.9);
     line-height: 1.6;
-    text-align: left; /* Zmienione z center na left */
+    text-align: left;
 }
 
 /* KONTAKT I STOPKA */
@@ -1159,6 +1185,48 @@ footer {
 }
 
 @media (max-width: 768px) {
+    .main-menu {
+        top: 15px;
+        right: 15px;
+        gap: 10px;
+    }
+
+    .language-toggle {
+        padding: 10px 14px;
+        gap: 10px;
+    }
+
+    .lang-label {
+        font-size: 0.8em;
+        padding: 3px 6px;
+    }
+
+    .toggle-switch {
+        width: 45px;
+        height: 24px;
+    }
+
+    .slider:before {
+        height: 18px;
+        width: 18px;
+        left: 3px;
+        bottom: 3px;
+    }
+
+    input:checked + .slider:before {
+        transform: translateX(21px);
+    }
+
+    .menu-button {
+        width: 45px;
+        height: 45px;
+    }
+
+    .navigation-menu {
+        width: 300px;
+        right: -300px;
+    }
+
     .hero {
         padding: 60px 20px 40px 20px;
     }
@@ -1178,12 +1246,12 @@ footer {
 
     .section-title,
     .early-access h2 {
-        font-size: 2.5rem; /* Dostosowane dla mobile */
+        font-size: 2.5rem;
         margin-bottom: 24px;
     }
 
     .section-subtitle {
-        font-size: 1.8rem; /* Dostosowane dla mobile */
+        font-size: 1.8rem;
     }
 
     .section-desc,
@@ -1222,15 +1290,14 @@ footer {
     }
 
     .problem-icon img {
-        width: 80px; /* Powiększona ikona dla mobile (40px * 2) */
-        height: 80px; /* Powiększona ikona dla mobile (40px * 2) */
+        width: 80px;
+        height: 80px;
     }
 
-    /* Dostosowanie X dla mobile - powiększone ikony */
     .problem-icon::after {
-        width: 80px; /* Szerokość ikony na mobile powiększona */
-        height: 80px; /* Wysokość ikony na mobile powiększona */
-        font-size: 5em; /* Proporcjonalnie dostosowany X */
+        width: 80px;
+        height: 80px;
+        font-size: 5em;
     }
 
     .problem-icon-label {
@@ -1262,19 +1329,6 @@ footer {
         font-size: 2.5em;
     }
 
-    .process-steps {
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-    }
-
-    .step {
-        max-width: 300px;
-        text-align: center;
-        flex-direction: column;
-        gap: 10px;
-    }
-
     .cta-buttons {
         flex-direction: column;
         align-items: center;
@@ -1288,6 +1342,43 @@ footer {
 }
 
 @media (max-width: 480px) {
+    .main-menu {
+        top: 10px;
+        right: 10px;
+        gap: 8px;
+    }
+
+    .language-toggle {
+        padding: 8px 12px;
+        gap: 8px;
+    }
+
+    .toggle-switch {
+        width: 40px;
+        height: 22px;
+    }
+
+    .slider:before {
+        height: 16px;
+        width: 16px;
+        left: 3px;
+        bottom: 3px;
+    }
+
+    input:checked + .slider:before {
+        transform: translateX(18px);
+    }
+
+    .menu-button {
+        width: 40px;
+        height: 40px;
+    }
+
+    .navigation-menu {
+        width: 280px;
+        right: -280px;
+    }
+
     .section,
     .early-access {
         padding: 40px 15px;
@@ -1306,23 +1397,22 @@ footer {
 
     .section-title,
     .early-access h2 {
-        font-size: 2rem; /* Dostosowane dla bardzo małych ekranów */
+        font-size: 2rem;
     }
 
     .section-subtitle {
-        font-size: 1.5rem; /* Dostosowane dla bardzo małych ekranów */
+        font-size: 1.5rem;
     }
 
     .problem-icon img {
-        width: 70px; /* Dostosowane dla bardzo małych ekranów, nadal powiększone */
+        width: 70px;
         height: 70px;
     }
 
-    /* Dalsze dostosowanie X dla bardzo małych ekranów */
     .problem-icon::after {
         width: 70px;
         height: 70px;
-        font-size: 4em; /* Dostosowane proporcjonalnie */
+        font-size: 4em;
     }
 
     .faq-question {
