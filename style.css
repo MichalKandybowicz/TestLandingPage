@@ -458,14 +458,13 @@ input:checked + .slider:before {
     opacity: 1;
 }
 
-/* Ikony w kartach - USUNIĘTY FILTR aby były kolorowe */
+/* Ikony w kartach - teraz kolorowe i spójne */
 .card-front img {
     width: 60px;
     margin-bottom: 16px;
-    /* Usunięty: filter: brightness(0) invert(1); */
-    opacity: 1; /* Zwiększona przezroczystość dla lepszej widoczności */
-    border-radius: 8px; /* Dodane lekko zaokrąglone rogi */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Dodany cień dla lepszego kontrastu */
+    opacity: 1;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .card-front h3,
