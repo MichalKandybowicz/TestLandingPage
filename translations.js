@@ -1,5 +1,71 @@
 const translations = {
     pl: {
+        roadmap: {
+            title: "Roadmapa rozwoju Biletuj",
+            description: "Jesteśmy w fazie pre-seed i aktywnie rozwijamy platformę. Prowadzimy testy wewnętrzne i przygotowujemy się do wydania MVP jeszcze tego lata.",
+            currentPhase: "TESTY WEWNĘTRZNE MVP",
+            currentTitle: "Finalizujemy MVP - wydanie lato 2025",
+            currentDesc: "Intensywnie testujemy podstawową wersję platformy. MVP zostanie wydane jeszcze tego lata i będzie zawierało wszystkie kluczowe funkcjonalności do sprzedaży biletów online.",
+
+            q1_2025: {
+                title: "Analiza rynku i development",
+                desc: "Przeprowadziliśmy badania rynku, zebraliśmy wymagania od organizatorów i rozpoczęliśmy budowę platformy"
+            },
+
+            summer_2025: {
+                title: "MVP - Wydanie publiczne",
+                feature1: "Kreator wydarzeń i formularzy sprzedażowych",
+                feature2: "Zintegrowany system płatności",
+                feature3: "Wysyłka maili i powiadomień przypominających",
+                feature4: "Aplikacja do skanowania kodów QR",
+                feature5: "Panel organizatora"
+            },
+
+            autumn_2025: {
+                title: "Pierwsze rozszerzenia",
+                feature1: "Kody promocyjne i zniżki (np. last minute)",
+                feature2: "Podstawowa analityka sprzedaży",
+                feature3: "Zaawansowane opcje biletów",
+                feature4: "Ulepszenia UX na podstawie feedbacku"
+            },
+
+            year_2026: {
+                title: "Integracje i skalowanie",
+                feature1: "Integracja z Facebook Events",
+                feature2: "API dla integracji z zewnętrznymi systemami",
+                feature3: "Zaawansowana analityka i raporty",
+                feature4: "Program partnerski",
+                feature5: "Mobile app dla organizatorów"
+            },
+
+            future: {
+                title: "Marketplace i społeczność",
+                feature1: "Publiczny marketplace wydarzeń",
+                feature2: "Społeczność organizatorów",
+                feature3: "White-label rozwiązania",
+                feature4: "AI w rekomendacjach wydarzeń",
+                feature5: "Międzynarodowa ekspansja"
+            },
+
+            devStatus: {
+                title: "🔧 Aktualny status rozwoju",
+                backend: "Backend i baza danych",
+                payments: "Integracja płatności",
+                frontend: "Frontend i UX",
+                testing: "Testy wewnętrzne",
+                deployment: "Wdrożenie produkcyjne",
+                launch: "Publiczne uruchomienie"
+            },
+
+            status: {
+                completed: "Ukończone",
+                inProgress: "Testy wewnętrzne - 85%",
+                upcoming: "Planowane",
+                future: "W planach"
+            },
+
+            disclaimer: "* Roadmapa może ulegać zmianom w oparciu o feedback użytkowników i potrzeby rynku. MVP zostanie wydane w lecie 2025."
+        },
         meta: {
             title: "Biletuj – Sprzedaż biletów i wejściówek online"
         },
@@ -11,6 +77,7 @@ const translations = {
             title: "Menu",
             home: "Start",
             pricing: "Ceny",
+            roadmap: "Roadmapa",
             earlyAccess: "Early Access",
             competition: "Porównanie",
             features: "Funkcje",
@@ -182,7 +249,6 @@ const translations = {
         },
         footer: "&copy; 2024 Biletuj. Wszelkie prawa zastrzeżone.",
         earlyAccess: {
-            badge: "EARLY ACCESS",
             title: "Dołącz do nas we wczesnym dostępie",
             description: "Zbieramy zgłoszenia od organizatorów wydarzeń, którzy chcą wpłynąć na kształt platformy. Twoje potrzeby i opinie kształtują funkcjonalności, które będziemy rozwijać w pierwszej kolejności.",
             benefit1: {
@@ -207,24 +273,81 @@ const translations = {
                 desc: "Wypełnij krótki formularz i dołącz do grupy organizatorów, którzy współtworzą przyszłość sprzedaży biletów online.",
                 primary: "Zgłoś swoje potrzeby",
                 secondary: "Umów rozmowę (30 min)"
-            },
-            steps: {
-                step1: {title: "Zgłoś się", desc: "Opowiedz nam o swoich potrzebach"},
-                step2: {title: "Wywiad", desc: "Krótka rozmowa o Twoich wyzwaniach"},
-                step3: {title: "Współtworzenie", desc: "Razem budujemy idealne rozwiązanie"},
-                step4: {title: "Early Access", desc: "Pierwszy dostęp do platformy"}
-            },
-            testimonial: {
-                quote: "Dzięki temu, że mogłem wpłynąć na rozwój funkcji, platforma idealnie odpowiada na potrzeby moich wydarzeń",
-                author: "- Marcin, organizator konferencji tech"
             }
         }
     },
     en: {
+        roadmap: {
+            title: "Biletuj Development Roadmap",
+            description: "We're in pre-seed phase and actively developing the platform. We're conducting internal tests and preparing for MVP release this summer.",
+            currentPhase: "MVP INTERNAL TESTING",
+            currentTitle: "Finalizing MVP - summer 2025 release",
+            currentDesc: "We're intensively testing the basic platform version. MVP will be released this summer and will include all key functionalities for online ticket sales.",
+
+            q1_2025: {
+                title: "Market analysis and development",
+                desc: "We conducted market research, gathered requirements from organizers and started building the platform"
+            },
+
+            summer_2025: {
+                title: "MVP - Public release",
+                feature1: "Event and sales form creator",
+                feature2: "Integrated payment system",
+                feature3: "Email delivery and reminder notifications",
+                feature4: "QR code scanning application",
+                feature5: "Organizer panel"
+            },
+
+            autumn_2025: {
+                title: "First extensions",
+                feature1: "Promo codes and discounts (e.g. last minute)",
+                feature2: "Basic sales analytics",
+                feature3: "Advanced ticket options",
+                feature4: "UX improvements based on feedback"
+            },
+
+            year_2026: {
+                title: "Integrations and scaling",
+                feature1: "Facebook Events integration",
+                feature2: "API for external system integrations",
+                feature3: "Advanced analytics and reports",
+                feature4: "Partner program",
+                feature5: "Mobile app for organizers"
+            },
+
+            future: {
+                title: "Marketplace and community",
+                feature1: "Public events marketplace",
+                feature2: "Organizers community",
+                feature3: "White-label solutions",
+                feature4: "AI in event recommendations",
+                feature5: "International expansion"
+            },
+
+            devStatus: {
+                title: "🔧 Current development status",
+                backend: "Backend and database",
+                payments: "Payment integration",
+                frontend: "Frontend and UX",
+                testing: "Internal testing",
+                deployment: "Production deployment",
+                launch: "Public launch"
+            },
+
+            status: {
+                completed: "Completed",
+                inProgress: "Internal testing - 85%",
+                upcoming: "Planned",
+                future: "In plans"
+            },
+
+            disclaimer: "* Roadmap may change based on user feedback and market needs. MVP will be released in summer 2025."
+        },
         menu: {
             title: "Menu",
             home: "Home",
             pricing: "Pricing",
+            roadmap: "Roadmap",
             earlyAccess: "Early Access",
             competition: "Comparison",
             features: "Features",
@@ -403,7 +526,6 @@ const translations = {
         },
         footer: "&copy; 2024 Biletuj. All rights reserved.",
         earlyAccess: {
-            badge: "EARLY ACCESS",
             title: "Join us in early access",
             description: "We're collecting applications from event organizers who want to influence the platform's development. Your needs and feedback shape the features we'll develop first.",
             benefit1: {
@@ -428,16 +550,6 @@ const translations = {
                 desc: "Fill out a short form and join the group of organizers co-creating the future of online ticket sales.",
                 primary: "Submit your needs",
                 secondary: "Book a call (30 min)"
-            },
-            steps: {
-                step1: {title: "Apply", desc: "Tell us about your needs"},
-                step2: {title: "Interview", desc: "A short talk about your challenges"},
-                step3: {title: "Co-creation", desc: "We build the perfect solution together"},
-                step4: {title: "Early Access", desc: "First access to the platform"}
-            },
-            testimonial: {
-                quote: "Thanks to being able to influence feature development, the platform perfectly fits my event needs",
-                author: "- Marcin, tech conference organizer"
             }
         }
     }
