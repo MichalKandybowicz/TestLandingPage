@@ -154,7 +154,7 @@ const translations = {
                 title: "Chcesz mieć wpływ na rozwój Biletuj?",
                 desc: "Wypełnij krótki formularz i dołącz do grupy organizatorów, którzy współtworzą przyszłość sprzedaży biletów online.",
                 primary: "Zgłoś swoje potrzeby",
-                secondary: "Umów rozmowę (15 min)"
+                secondary: "Umów rozmowę"
             },
             steps: {
                 step1: { title: "Zgłoś się", desc: "Opowiedz nam o swoich potrzebach" },
@@ -323,7 +323,7 @@ const translations = {
                 title: "Want to influence Biletuj's development?",
                 desc: "Fill out a short form and join the group of organizers co-creating the future of online ticket sales.",
                 primary: "Submit your needs",
-                secondary: "Book a call (15 min)"
+                secondary: "Book a call"
             },
             steps: {
                 step1: { title: "Apply", desc: "Tell us about your needs" },
