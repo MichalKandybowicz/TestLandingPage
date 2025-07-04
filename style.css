@@ -385,10 +385,8 @@ input:checked + .slider:before {
 
 /* PRICING SECTION */
 .pricing {
-    background: rgba(255, 255, 255, 0.05);
     border-radius: 20px;
     margin: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .pricing-highlights {
@@ -497,10 +495,8 @@ input:checked + .slider:before {
 
 /* ROADMAP SECTION */
 .roadmap {
-    background: rgba(255, 255, 255, 0.02);
     border-radius: 20px;
     margin: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 /* Current Phase Badge */
