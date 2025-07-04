@@ -367,7 +367,7 @@ input:checked + .slider:before {
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
 }
 
-/* Benefits Grid - Early Access */
+/* Benefits Grid - Early Access - TERAZ UŻYWA TEGO SAMEGO STYLU CO CARDS */
 .benefits-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -375,10 +375,13 @@ input:checked + .slider:before {
     margin: 50px 0;
 }
 
-.benefit-icon {
-    font-size: 2.5em;
-    margin-bottom: 15px;
-    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+/* SPÓJNE STYLE DLA IKON - wszystkie ikony używają tego samego stylu */
+.benefit img {
+    width: 60px;
+    margin-bottom: 16px;
+    opacity: 1;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .benefit h3 {
@@ -393,6 +396,7 @@ input:checked + .slider:before {
     font-size: 0.95em;
     line-height: 1.5;
     color: rgba(255, 255, 255, 0.85);
+    text-align: left; /* Zmienione z center na left */
 }
 
 /* REDEFINICJA STANDARDOWYCH KART - GLASS EFFECT */
