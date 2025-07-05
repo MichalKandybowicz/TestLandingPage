@@ -775,9 +775,6 @@ input:checked + .slider:before {
     color: #fbbf24;
 }
 
-.status-item.in-progress .status-icon {
-    animation: spin 2s linear infinite;
-}
 
 @keyframes spin {
     from { transform: rotate(0deg); }
